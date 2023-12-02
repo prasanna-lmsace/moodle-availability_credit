@@ -34,6 +34,10 @@ defined('MOODLE_INTERNAL') || die();
  */
 class condition extends \core_availability\condition {
 
+    public $cost;
+
+    public $time;
+
     /**
      * Constructor.
      *
@@ -115,7 +119,7 @@ class condition extends \core_availability\condition {
      *
      * @param bool $not        True if NOT is in force
      * @param bool $standalone True to use standalone lang strings
-     * @param bool $info       Information about the availability condition and module context
+     * @param object $info       Information about the availability condition and module context
      * @return string          The string about the condition and it's status
      */
     protected function get_either_description($not, $standalone, $info) {
